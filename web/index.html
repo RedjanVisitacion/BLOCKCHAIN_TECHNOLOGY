@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Voting (Sepolia)</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Simple Voting</h1>
+        <p class="muted">Connected to Sepolia via MetaMask</p>
+      </header>
+
+      <section class="card">
+        <div class="row">
+          <div>
+            <div class="label">Status</div>
+            <div id="status" class="value">Not connected</div>
+          </div>
+          <button id="btnConnect">Connect MetaMask</button>
+        </div>
+
+        <div class="grid">
+          <div>
+            <div class="label">Network</div>
+            <div id="network" class="value">-</div>
+          </div>
+          <div>
+            <div class="label">Account</div>
+            <div id="account" class="value mono">-</div>
+          </div>
+          <div>
+            <div class="label">Contract</div>
+            <div id="contract" class="value mono">-</div>
+          </div>
+          <div>
+            <div class="label">Election</div>
+            <div id="election" class="value">-</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="row">
+          <h2>Candidates</h2>
+          <button id="btnRefresh" class="secondary">Refresh</button>
+        </div>
+        <div id="candidates" class="list"></div>
+        <div id="message" class="message"></div>
+      </section>
+
+      <footer>
+        <p class="muted">You will be asked to approve the vote transaction in MetaMask.</p>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/ethers@6.11.1/dist/ethers.umd.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
